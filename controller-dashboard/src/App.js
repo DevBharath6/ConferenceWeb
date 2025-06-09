@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import NavbarManager from './components/NavbarManager';
+import FooterManager from './components/FooterManager';
 import './styles/dashboard.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Routes>
               <Route path="/" element={<NavbarManager />} />
               <Route path="/navbar" element={<NavbarManager />} />
+              <Route path="/footer" element={<FooterManager />} />
               <Route path="/settings" element={<div>Settings Page</div>} />
               <Route path="/logout" element={<Navigate to="/" replace />} />
               <Route path="*" element={<Navigate to="/" replace />} />

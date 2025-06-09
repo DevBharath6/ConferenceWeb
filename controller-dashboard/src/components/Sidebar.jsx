@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FaBars, FaHome, FaSitemap, FaCog, FaSignOutAlt } from "react-icons/fa";
+import { FaBars, FaHome, FaSitemap, FaCog, FaSignOutAlt, FaFileAlt } from "react-icons/fa";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,6 +37,10 @@ const Sidebar = () => {
           <NavLink to="/navbar" className={({ isActive }) => `sidebar-item ${isActive ? "active" : ""}`} onClick={closeSidebar}>
             <FaSitemap />
             <span>Navbar Manager</span>
+          </NavLink>
+          <NavLink to="/footer" className={({ isActive }) => `sidebar-item ${isActive ? "active" : ""}`} onClick={closeSidebar}>
+            <FaFileAlt />
+            <span>Footer Manager</span>
           </NavLink>
           <NavLink to="/settings" className={({ isActive }) => `sidebar-item ${isActive ? "active" : ""}`} onClick={closeSidebar}>
             <FaCog />

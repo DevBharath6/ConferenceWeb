@@ -3,6 +3,8 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaRocket, FaChartLine, FaUsers, FaCog } from 'react-icons/fa';
 import Announcements from './Announcements';  // import the new component
+import { Carousel } from 'react-bootstrap';
+
 
 const Home = () => {
   const announcements = [
@@ -48,6 +50,47 @@ const Home = () => {
 
       {/* Announcements Section - added here */}
       <Announcements messages={announcements} />
+      <section className="py-5 bg-dark">
+  <Container>
+    <Carousel interval={3500} pause="hover">
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-img"
+          src="https://images.unsplash.com/photo-1581090700227-1e8b1f5d7041?auto=format&fit=crop&w=800&q=80"
+          alt="Keynote Speaker"
+        />
+        <Carousel.Caption>
+          <h5>Keynote Speakers</h5>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-img"
+          src="https://images.unsplash.com/photo-1587614382346-4ecf3a5df3c4?auto=format&fit=crop&w=800&q=80"
+          alt="Workshops"
+        />
+        <Carousel.Caption>
+          <h5>Hands-on Workshops</h5>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-img"
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
+          alt="Networking"
+        />
+        <Carousel.Caption>
+          <h5>Networking Events</h5>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  </Container>
+</section>
+
+
+
 
       {/* Services Section (Rebranded as Conference Highlights) */}
       <section className="py-8">

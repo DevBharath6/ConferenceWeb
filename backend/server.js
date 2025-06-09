@@ -12,6 +12,11 @@ app.use(express.json());
 // Routes
 const navbarRoutes = require('./routes/navbarRoutes');
 app.use('/api/navbar', navbarRoutes);
+const footerRoutes = require('./routes/footerRoutes');
+app.use('/api/footer', footerRoutes);
+
+
+
 
 // Debugging + Mongoose fix
 mongoose.set('strictQuery', true);
